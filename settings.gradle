@@ -8,3 +8,9 @@ pluginManagement {
 		gradlePluginPortal()
 	}
 }
+
+includeBuild('aIncludedBuild') {
+	dependencySubstitution {
+		substitute module('aIncludedBuild:aIncludedBuild') using project(':')
+	}
+}
